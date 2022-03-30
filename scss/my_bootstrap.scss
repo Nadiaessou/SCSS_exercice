@@ -1,0 +1,195 @@
+/////// font
+@import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
+$font-family-base: "Avenir LT Std", sans-serif;
+
+/////// general
+$container-max-widths: (
+  md: 1350px,
+) ;
+$body-color: #111111;
+
+/////// text
+$font-size-base : 1.125rem;
+$line-height-base : 1.78;
+.important {
+    font-weight: 750;
+}
+
+/////// padding & margin
+$spacer: 1rem;
+$spacers: (
+  5: $spacer * 0.625, // 20px
+  6: $spacer * 1.25, // 20px
+  7: $spacer * 1.875, // 30px
+  8: $spacer * 2.5, // 40px
+  9: $spacer * 3.75, // 60px
+  10: $spacer * 6.25, // 100px
+);
+
+/////// colors 
+$theme-colors: (
+  "blue-color": #3fc3ee,
+  "grey-light-color": #eeeeee,
+  "white-color": #fff,
+);
+$orange-color: #ff8656;
+$grey-color: #757575;
+
+/////// btn 
+$btn-font-weight : 750;
+$btn-border-radius-lg: 0;
+$btn-border-radius-sm: 0;
+$btn-font-size-lg: 1.25rem;
+$btn-font-size-sm: 1.25rem;
+
+/////// link 
+$link-color: #111111;
+$link-hover-color:$orange-color;
+$link-hover-decoration: none;
+
+/////// headers
+$headings-font-weight: 750;
+$h1-font-size: 3.5rem;
+$h2-font-size: 2.5rem;
+$h3-font-size: 2.25rem;
+$h4-font-size: 1.625rem;
+$h5-font-size: 1.375rem;
+@media (max-width: 768px) {  
+    section {
+        h1 {
+            font-size: 2.25rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        h3 {
+            font-size: 1.75rem;
+        }
+        h4 {
+            font-size: 1.25rem;
+        }
+        h5 {
+            font-size: 1.125rem;
+        }
+    }
+    p {
+        font-size: 1rem;
+    }
+    #section4 {
+        .blockquote {
+            p {
+            font-size: 2rem;
+            line-height: 36px;
+            }
+        }
+    }
+}
+
+// Breadcrumb
+$breadcrumb-bg: none;
+$breadcrumb-divider: quote(" 〉");
+$breadcrumb-font-size: 1.125rem;
+.breadcrumb {
+    a {
+        &:hover {
+            color: $grey-color;
+            text-decoration: none;
+        }
+    }
+    .breadcrumb-item + .breadcrumb-item::before {
+        font-size: 10px;
+        padding-top: 0.5rem;
+    }
+}
+
+// SECTION 1 SLIDER
+#my_carousel {
+    .carousel-indicators {
+        position: initial;
+        li {
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            margin-left: 5px;
+            border-radius: 50%;
+            background-color: #000;
+        }
+    } 
+}
+
+// SECTION 3
+$card-spacer-x : 0 1.25rem;
+#section3 {
+    .card-text {
+        color: $grey-color;
+    }
+    .card-cart {
+        background-image: url("../img/img3.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        width: 1.2rem;
+    }
+    .card-price {
+        font-size: 1.375rem;
+        font-weight: 750;
+    }
+    .bg-bloc {
+        background-image: url("../img/img1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 20rem;
+        height: 100%;
+    }
+    #products-slide::-webkit-scrollbar {
+        display: none;
+    }
+    .btn-white-color {
+        &:hover {
+            background-color: #111111;
+            color: #fff;
+            border-color: #111111;
+        }
+    }
+}
+@media (max-width: 768px) { 
+    #section3 {
+        .card-text {
+            height: 60px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .card-price {
+            font-size: 1.125rem;
+        }
+    }
+}
+// SECTION 4
+/////// blockquote
+.blockquote {
+    font-weight: 750;
+    line-height: 3.5rem;
+    p {
+        font-size:2.5rem;
+        span {
+            background-image: linear-gradient(#ff8656 0%, #ff8656 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.4em;
+            background-position: 0 88%;
+            transition: background-size 0.25s ease-in;
+            &:hover {
+                background-size: 100% 88%;
+              }
+        }
+    }
+}
+
+// FOOTER
+footer {
+    h4 {
+        color: $orange-color;
+    }
+} 
+
+@import "../bootstrap-4.6.0/scss/bootstrap";
